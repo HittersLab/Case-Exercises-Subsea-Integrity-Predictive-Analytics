@@ -42,4 +42,4 @@ The analysis will use documented Python functions, validation checks, visualisat
 
 ## Important Note
 
-The simplified hydrate relationship used in this educational exercise is not a substitute for a validated engineering flow-assurance model. Actual operational decisions must use approved engineering limits and appropriate specialist analysis.
+The simplified hydrate relationship used in this educational exercise is not a substitute for a validated engineering flow assurance model. Actual operational decisions must use approved engineering limits and appropriate specialist analysis.
