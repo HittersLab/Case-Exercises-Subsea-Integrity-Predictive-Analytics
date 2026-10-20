@@ -1,0 +1,13 @@
+failure_mode_id,component,failure_mode,potential_effect,severity,occurrence,detection,risk_priority_number,risk_level,recommended_action
+FM-01,Control valve,Valve stuck,Loss of flow control,6,4,4,96,Low,Inspect actuator and verify valve travel
+FM-02,Hydraulic connector,Seal degradation,External leakage,7,5,5,175,Medium,Trend leakage and plan seal inspection
+FM-03,Seal,Connector leakage,Loss of hydraulic pressure,6,4,5,120,Medium,Perform connector pressure/leak test
+FM-04,Choke valve,Sensor drift,Incorrect process readings,4,6,3,72,Low,Calibrate sensor and compare with reference
+FM-05,Sensor,Choke erosion,Reduced flow-control performance,7,5,6,210,High,Inspect choke trim and trend differential pressure
+FM-06,Umbilical,Corrosion wall loss,Reduced pressure containment,8,4,6,192,Medium,Review wall-thickness inspection results
+FM-07,Control valve,Actuator failure,Valve fails to actuate,7,5,5,175,Medium,Test actuator response and hydraulic supply
+FM-08,Hydraulic connector,Umbilical damage,Loss of control signal,8,3,6,144,Medium,Inspect umbilical and verify signal continuity
+FM-09,Seal,Blocked hydraulic line,Slow or failed actuation,6,5,4,120,Medium,Flush/test hydraulic circuit
+FM-10,Choke valve,Fatigue cracking,Structural integrity degradation,9,3,7,189,Medium,Review fatigue assessment and inspect critical locations
+FM-11,Sensor,Gas leakage,Hydrocarbon release,9,2,6,108,Medium,Investigate gas detection and isolate if required
+FM-12,Umbilical,Electrical fault,Loss of monitoring/control,6,4,4,96,Low,Check electrical connections and instrument supply
