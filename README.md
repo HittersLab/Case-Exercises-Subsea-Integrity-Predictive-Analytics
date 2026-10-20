@@ -1,116 +1,98 @@
-# Case Exercise 1: Design Envelope Construction and Visualisation
+# Case Exercises: Subsea Integrity Predictive Analytics
 
-## 1. Project Overview
+## Project Overview
 
-This project focuses on constructing and visualising the pressure–temperature (P–T) design envelope for subsea assets. It demonstrates how Python can be used to assess operating conditions against defined engineering limits, visualise operating data, and identify potential operating-envelope excursions.
+This repository contains practical engineering case exercises focused on subsea asset integrity, corrosion prediction, remaining useful life estimation, Failure Mode, Effects and Criticality Analysis (FMECA), and predictive analytics.
 
-The exercise uses subsea jumper data from the training case study. Where operating information was not provided, clearly labelled synthetic data and illustrative assumptions were used to demonstrate the required analysis.
+The project combines subsea engineering principles with Python programming, data analysis, physics-based modelling, and visualisation. Each case is organised in a separate folder containing its Jupyter notebook and relevant supporting files.
 
-## 2. Project Objectives
+## Project Objectives
 
-The objectives of this exercise are to:
+- Apply engineering principles to subsea asset integrity challenges.
+- Develop Python functions for engineering calculations and physics-based models.
+- Generate and analyse synthetic operational datasets.
+- Estimate corrosion rates and remaining useful life (RUL).
+- Identify potential subsea equipment failure modes and assess their risks.
+- Explore how engineering parameters can support machine learning feature engineering.
+- Develop practical, reproducible engineering analysis workflows.
 
-1. Develop a Python function to construct a pressure–temperature design envelope, including documentation, input validation, and error handling.
-2. Visualise the P–T envelope, including the simplified hydrate formation curve, wax appearance temperature (WAT) reference line, maximum allowable operating pressure (MAOP), and jumper operating points.
-3. Extend the analysis to a three-parameter pressure–temperature–flow envelope and visualise operating points in three dimensions.
-4. Develop a function to calculate the percentage of operating observations within the defined limits for each parameter and assess overall operating-envelope compliance.
+## Case Exercises
 
-## 3. Tools and Technologies
+### Case 1: Design Envelope Construction and Visualisation
 
-- Python
-- Jupyter Notebook
-- Google Colab
-- Pandas
-- NumPy
-- Matplotlib
-- Git and GitHub
+**Folder:** `Case1_Design_Envelope/`
 
-## 4. Project Structure
+Focuses on subsea operating envelopes and the monitoring of pressure and temperature conditions against defined operating limits.
+
+Key activities:
+- Implement a pressure–temperature design envelope function.
+- Visualise operating conditions and relevant engineering boundaries.
+- Extend the visualisation to include flow-related operating conditions.
+- Assess the proportion of operating time spent within the defined envelope.
+
+### Case 2: Corrosion Rate Prediction and Remaining Useful Life
+
+**Folder:** `Case2_Corrosion_RUL/`
+
+Focuses on corrosion modelling, synthetic SCADA data analysis, and the estimation of remaining useful life for subsea jumpers.
+
+Key activities:
+- Implement the de Waard–Milliams corrosion rate model and unit tests.
+- Generate a synthetic ten-year hourly operational dataset.
+- Apply a physics-based feature pipeline and calculate monthly average corrosion rates.
+- Estimate jumper remaining useful life and visualise corrosion-related risk classifications.
+
+### Case 3: FMECA and Feature Mapping
+
+**Folder:** `Case3_FMECA_Feature_Mapping/`
+
+Focuses on Failure Mode, Effects and Criticality Analysis for subsea Christmas trees and the mapping of engineering failure mechanisms to potential machine learning features.
+
+Key activities:
+- Develop an FMECA worksheet covering at least ten failure modes.
+- Map failure modes to relevant physical parameters and proposed engineered features.
+- Implement and validate at least two physics-based models against hand calculations.
+- Visualise failure-mode severity, occurrence, and Risk Priority Numbers (RPNs).
+
+## Tools and Technologies
+
+- **Python** — engineering calculations and data processing.
+- **Jupyter Notebook / Google Colab** — interactive development and documentation.
+- **NumPy and pandas** — numerical computing and data analysis.
+- **Matplotlib** — engineering data visualisation.
+- **Git and GitHub** — version control and project documentation.
+
+## Repository Structure
 
 ```text
-Case1_Design_Envelope/
-│
+Case-Exercises-Subsea-Integrity-Predictive-Analytics/
 ├── README.md
-│
-├── Case1_Design_Envelope.ipynb
-│
-└── data/
-    ├── jumper_inspection_data_source_provided.csv
-    ├── synthetic_jumper_flow_rates_demo.csv
-    └── synthetic_hourly_operating_history_demo.csv
+├── Case1_Design_Envelope/
+│   ├── README.md
+│   └── Case1_Design_Envelope.ipynb
+├── Case2_Corrosion_RUL/
+│   ├── README.md
+│   └── Case2_Corrosion_RUL.ipynb
+└── Case3_FMECA_Feature_Mapping/
+    ├── README.md
+    └── Case3_FMECA_Feature_Mapping.ipynb
 ```
 
-### File Descriptions
+Supporting datasets, test files, and visualisation outputs will be stored in the relevant case folders as required.
 
-- **`README.md`** — Describes the project objectives, methodology, data assumptions, and instructions for running the notebook.
-- **`Case1_Design_Envelope.ipynb`** — Contains the Markdown explanations, Python functions, engineering calculations, visualisations, synthetic data generation, and validation tests for all four assessment questions.
-- **`jumper_inspection_data_source_provided.csv`** — Contains the jumper inspection and operating data used in the exercise, based on the supplied training dataset.
-- **`synthetic_jumper_flow_rates_demo.csv`** — Contains illustrative synthetic flow-rate values used to extend the analysis to three parameters.
-- **`synthetic_hourly_operating_history_demo.csv`** — Contains synthetic hourly operating observations used to demonstrate operating-time compliance calculations.
+## Data and Engineering Assumptions
 
-*Note: The assessment questions are sections within the Jupyter Notebook, not separate files or folders. Confirm that the CSV filenames and locations match the files actually committed to the repository.*
+Synthetic datasets and illustrative assumptions may be used for educational purposes where actual operational data or approved engineering limits are unavailable. Such assumptions will be identified in the relevant notebooks.
 
-## 5. Methodology
+The analyses are intended for learning and demonstration. They do not replace approved engineering design codes, asset-specific integrity assessments, or validated operational data.
 
-### Question 1: Pressure–Temperature Envelope Construction
+## Learning Outcomes
 
-A Python function named `pressure_temperature_envelope()` defines the pressure and temperature limits for the simplified subsea operating envelope. The function includes documentation, input validation, and error handling to support reliable calculations.
+This project supports the development of practical skills in subsea integrity engineering, Python programming, physics-based modelling, data analytics, and predictive maintenance concepts.
 
-### Question 2: Two-Dimensional P–T Envelope Visualisation
+It also demonstrates the application of computational methods to engineering problems relevant to the energy sector.
 
-A two-dimensional plot displays the pressure–temperature envelope and the six jumper operating points. The visualisation includes the simplified hydrate-temperature curve, a temperature safety offset, an illustrative WAT reference line, pressure boundaries, and labelled jumper operating points.
+## Author
 
-### Question 3: Three-Parameter P–T–Flow Envelope Analysis
+Graduate Trainee Engineer | Energy Sector | Predictive AI and Machine Learning
 
-The analysis is extended to include flow rate alongside pressure and temperature. A three-dimensional scatter plot displays the operating points and distinguishes those classified as within or outside the defined limits.
-
-### Question 4: Operating-Time Compliance Assessment
-
-A Python function evaluates operating observations and calculates the percentage of observations within the defined limits for each monitored parameter. It also reports combined compliance across the selected parameters.
-
-## 6. Data Sources and Engineering Assumptions
-
-The supplied jumper dataset includes six records with operating pressure, temperature, water cut, original wall thickness, current wall thickness, and corrosion-rate information.
-
-Additional flow-rate values and hourly operating observations are synthetic data generated for this educational exercise. They are not actual subsea field measurements.
-
-A WAT value of **35°C** is used as an illustrative assumption for visualisation. It is not a confirmed field measurement.
-
-The simplified hydrate-temperature equation follows the training exercise. The resulting envelope is an educational model and must not be interpreted as a validated engineering design envelope.
-
-## 7. How to Run the Notebook
-
-1. Open the project repository on GitHub.
-2. Open `Case1_Design_Envelope.ipynb`.
-3. Open the notebook in Google Colab or a local Jupyter Notebook environment.
-4. Run the notebook cells sequentially, starting with the library imports and data setup.
-5. Ensure the required CSV files are available at the file paths used by the notebook.
-
-Install the required Python libraries if they are not already available:
-
-```bash
-pip install pandas numpy matplotlib jupyter
-```
-
-## 8. Expected Outputs
-
-The notebook is designed to produce:
-
-- A pressure–temperature envelope generated using Python.
-- A two-dimensional P–T plot showing the operating envelope and jumper operating points.
-- A three-dimensional P–T–flow visualisation.
-- Operating-point classifications based on the defined limits.
-- Parameter-level and combined operating-time compliance percentages.
-- Validation tests demonstrating the behaviour of the implemented functions.
-
-Actual outputs depend on successfully running the notebook and its associated data cells.
-
-## 9. Key Learning Outcomes
-
-This exercise demonstrates how Python can be applied to subsea engineering analysis, operating-envelope monitoring, engineering data visualisation, and basic operating-compliance assessment.
-
-It also reinforces the importance of input validation, clear documentation, reproducible analysis, and distinguishing supplied engineering data from synthetic data and assumptions.
-
-## 10. Disclaimer
-
-This project is intended for educational and training purposes only. The simplified equations, illustrative assumptions, and synthetic datasets must not be used as substitutes for approved engineering calculations, validated operating limits, or formal subsea asset integrity assessments.
