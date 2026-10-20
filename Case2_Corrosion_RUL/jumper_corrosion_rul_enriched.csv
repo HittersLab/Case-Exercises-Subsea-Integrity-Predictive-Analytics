@@ -1,0 +1,7 @@
+jumper_id,original_wall_thickness_mm,current_wall_thickness_mm,corrosion_rate_mm_y,operating_pressure_psi,temperature_c,water_cut_pct,remaining_wall_allowance_mm,estimated_rul_years,risk_classification
+J-001,12.7,11.2,0.15,4200,65,32,5.199999999999999,34.666666666666664,Low
+J-002,12.7,10.8,0.19,4400,72,45,4.800000000000001,25.263157894736846,Low
+J-003,12.7,11.5,0.12,3800,58,28,5.5,45.833333333333336,Low
+J-004,10.3,8.9,0.14,3200,55,38,2.9000000000000004,20.714285714285715,Low
+J-005,12.7,10.1,0.26,4467,78,62,4.1,15.769230769230766,Low
+J-006,12.7,11.0,0.17,4100,68,40,5.0,29.41176470588235,Low
